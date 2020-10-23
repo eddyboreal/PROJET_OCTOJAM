@@ -11,6 +11,7 @@ public class TableController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //Place the shots on the table
         Transform[] shotLocations = new Transform[6];
 
         for (int i = 0; i < transform.childCount; i++)

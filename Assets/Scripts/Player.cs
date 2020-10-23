@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public List<string> Shot_Sequence = new List<string>();
+    public List<string> Shot_Sequence = new List<string>(); //The name of the differents shots the player has to drink to win the game
 
-    [SerializeField] private Transform feets;
-    [SerializeField] private float speed = 10.0f;
-    private Rigidbody2D rb2d;
+    [SerializeField] private Transform feets; //Determines where are the feet of the player
+    [SerializeField] private float speed = 10.0f; //Determines the player's speed
+    private Rigidbody2D rb2d; //Player's rigidbody2D
     private Vector2 moveVelocity;
-    private GameObject nearestLocation;
+    private GameObject nearestLocation; //Store the nearest shot location
     
 
     // Start is called before the first frame update
@@ -37,6 +37,7 @@ public class Player : MonoBehaviour
         rb2d.MovePosition(rb2d.position + moveVelocity * Time.fixedDeltaTime);
     }
 
+    //Detects nearest shot
     void OnTriggerStay2D(Collider2D collider)
     {
         if(nearestLocation == null || Vector3.Distance(collider.gameObject.transform.position,feets.position) <= Vector3.Distance(nearestLocation.transform.position, feets.position))

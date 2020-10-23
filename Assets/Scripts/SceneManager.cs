@@ -4,23 +4,24 @@ using UnityEngine;
 
 public class SceneManager : MonoBehaviour
 {
-    private GameObject[] players = GameObject.FindGameObjectsWithTag("Players");
+    private GameObject[] players;
+    private int sequences_length;
 
     // all the shots in the scene
     private Dictionary<string, int> shots = new Dictionary<string, int>
     {
-        {"shot 1", 0 },
-        {"shot 2", 0 },
-        {"shot 3", 0 },
-        {"shot 4", 0 },
-        {"shot 5", 0 },
-        {"shot 6", 0 }
+        {"type 1", 0 },
+        {"type 2", 0 },
+        {"type 3", 0 },
+        {"type 4", 0 },
+        {"type 5", 0 },
+        {"type 6", 0 }
     };
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        players = GameObject.FindGameObjectsWithTag("Players");
     }
 
     // Update is called once per frame
@@ -31,6 +32,10 @@ public class SceneManager : MonoBehaviour
 
     private void generateSequences()
     {
+        int nb_players = players.Length;
+        if(nb_players > 0)
+        {
 
+        }
     }
 }

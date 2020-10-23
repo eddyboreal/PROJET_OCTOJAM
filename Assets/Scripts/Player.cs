@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-
+    public List<string> Shot_Sequence = new List<string>();
     [SerializeField] private float speed = 10.0f;
     private Rigidbody2D rb2d;
     private Vector2 moveVelocity;

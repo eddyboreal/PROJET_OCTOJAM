@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public List<string> Shot_Sequence = new List<string>();
 
     [SerializeField] private Transform feets;
     [SerializeField] private float speed = 10.0f;

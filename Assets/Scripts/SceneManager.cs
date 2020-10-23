@@ -5,8 +5,11 @@ using UnityEngine;
 
 public class SceneManager : MonoBehaviour
 {
+    // list of players spawned in the scene
     private GameObject[] players;
+    // number of shots in one player sequence
     private int sequences_length = 6;
+    // number of shots added arbitrary in the scene
     [SerializeField]
     private int nb_additional_shots = 6;
 

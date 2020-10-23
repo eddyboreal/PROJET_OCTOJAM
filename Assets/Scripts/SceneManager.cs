@@ -8,7 +8,7 @@ public class SceneManager : MonoBehaviour
     private GameObject[] players;
     private int sequences_length = 6;
     [SerializeField]
-    private int nb_additional_shots = 0;
+    private int nb_additional_shots = 6;
 
     // all the shots in the scene
     private Dictionary<string, int> shots = new Dictionary<string, int>
@@ -25,14 +25,21 @@ public class SceneManager : MonoBehaviour
     {
         players = GameObject.FindGameObjectsWithTag("Player");
         generateSequences();
+        generateAdditionalShots();
     }
+
+    /*void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            foreach (KeyValuePair<string, int> kvp in shots) Debug.Log(kvp.Key + "/" + kvp.Value);
+        }    
+    } */
 
     private void generateSequences()
     {
         int nb_players = players.Length;
-        Debug.Log("Nb Joueurs");
-        Debug.Log(nb_players);
-        int nb_shots = nb_players * sequences_length + nb_additional_shots;
+        
         if(nb_players > 0)
         {
             foreach(GameObject p in players)
@@ -45,6 +52,16 @@ public class SceneManager : MonoBehaviour
                     if (shots.ContainsKey(shot_key)) shots[shot_key] += 1;
                 }
             }
+        }
+    }
+
+    private void generateAdditionalShots()
+    {
+        for(int i = 0; i < nb_additional_shots; ++i)
+        {
+            int rd_shot = Random.Range(0, shots.Count);
+            string shot_key = shots.ElementAt(rd_shot).Key;
+            if (shots.ContainsKey(shot_key)) shots[shot_key] += 1;
         }
     }
 }

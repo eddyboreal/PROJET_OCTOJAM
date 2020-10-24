@@ -18,6 +18,8 @@ public class SceneManager : MonoBehaviour
     [SerializeField]
     private List<GameObject> _shots = new List<GameObject>();
 
+    private List<Transform> spawners = new List<Transform>();
+
     private float timer = 3f;
     private float time = 0f;
 

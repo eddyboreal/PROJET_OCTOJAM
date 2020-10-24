@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     [SerializeField] private Transform feets; //Determines where are the feet of the player
     [SerializeField] private float speed = 10.0f; //Determines the player's speed
     private Rigidbody2D rb2d; //Player's rigidbody2D
+    private Animator animator;
     private Vector2 moveVelocity;
     private GameObject nearestLocation; //Store the nearest shot location
     private PlayerInputHandler pIHandler;
@@ -33,6 +34,7 @@ public class Player : MonoBehaviour
     {
         //playerIndex = playerIndex++;
         rb2d = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
     public int GetPlayerIndex()
@@ -46,13 +48,25 @@ public class Player : MonoBehaviour
 
         moveVelocity = moveInput.normalized * speed;
 
+        if(moveVelocity.magnitude != 0 && !isDrinking)
+        {
+            animator.SetBool("walking", true);
+        }
+        else if(!isDrinking)
+        {
+            animator.SetBool("walking", false);
+        }
+
         if (isDrinking)
         {
+            //GetComponent<AudioSource>().Play(A)
             drinkTime += Time.deltaTime;
             TimeBar.fillAmount = (drinkTimer - drinkTime) / drinkTimer;
+            animator.SetBool("drinking", true);
             if (drinkTime >= drinkTimer)
             {
                 pIHandler.reactivateInputs();
+                animator.SetBool("drinking", false);
                 isDrinking = false;
                 drinkTime = 0;
                 Canvas.SetActive(false);

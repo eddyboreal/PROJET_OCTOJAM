@@ -5,16 +5,11 @@ using UnityEngine;
 public class Shot : MonoBehaviour
 {
     public string label;
-    // Start is called before the first frame update
+
     void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        // random first sprite played in the animation
+        this.gameObject.transform.GetChild(1).GetComponent<Animator>().Play("liquid_anim", 0, Random.value);
     }
 
     public void SetLabel(string label)
@@ -28,22 +23,22 @@ public class Shot : MonoBehaviour
         switch (label)
         {
             case "El Verdito":
-                this.GetComponent<SpriteRenderer>().color = Color.green;
+                this.gameObject.transform.GetChild(1).GetComponent<SpriteRenderer>().color = Color.green;
                 break;
             case "El Naranjo":
-                this.GetComponent<SpriteRenderer>().color = new Color(0.96f, 0.54f, 0f);
+                this.gameObject.transform.GetChild(1).GetComponent<SpriteRenderer>().color = new Color(0.96f, 0.54f, 0f);
                 break;
             case "La Rosita":
-                this.GetComponent<SpriteRenderer>().color = new Color(0.96f, 0.22f, 0.95f);
+                this.gameObject.transform.GetChild(1).GetComponent<SpriteRenderer>().color = new Color(0.96f, 0.22f, 0.95f);
                 break;
             case "La Negrita":
-                this.GetComponent<SpriteRenderer>().color = Color.black;
+                this.gameObject.transform.GetChild(1).GetComponent<SpriteRenderer>().color = Color.black;
                 break;
             case "El Bermillon":
-                this.GetComponent<SpriteRenderer>().color = new Color(0.70f, 0.22f, 0.07f);
+                this.gameObject.transform.GetChild(1).GetComponent<SpriteRenderer>().color = new Color(0.70f, 0.22f, 0.07f);
                 break;
             case "El Grisito":
-                this.GetComponent<SpriteRenderer>().color = Color.gray;
+                this.gameObject.transform.GetChild(1).GetComponent<SpriteRenderer>().color = Color.gray;
                 break;
             default:
                 Color c = Color.white;

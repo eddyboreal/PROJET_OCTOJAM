@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.InputSystem.InputAction;
 
 public class Player : MonoBehaviour
 {
@@ -11,24 +12,35 @@ public class Player : MonoBehaviour
     private Rigidbody2D rb2d; //Player's rigidbody2D
     private Vector2 moveVelocity;
     private GameObject nearestLocation; //Store the nearest shot location
+
+    public Vector3 moveInput;
+
     
+
+
 
     // Start is called before the first frame update
     void Start()
     {
+        //playerIndex = playerIndex++;
         rb2d = GetComponent<Rigidbody2D>();
+    }
+
+    public int GetPlayerIndex()
+    {
+        return 1; //playerIndex;
     }
 
     // Update is called once per frame
     void Update()
     {
-        Vector3 moveInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+        //moveInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         moveVelocity = moveInput.normalized * speed;
 
-        if (Input.GetKeyDown(KeyCode.T))
+        /*if (Input.GetKeyDown(KeyCode.T))
         {
             Debug.Log(nearestLocation.name);
-        }
+        }*/
 
     }
 
@@ -45,4 +57,5 @@ public class Player : MonoBehaviour
             nearestLocation = collider.gameObject;
         }
     }
+
 }

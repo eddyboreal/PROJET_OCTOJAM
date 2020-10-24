@@ -15,10 +15,6 @@ public class Player : MonoBehaviour
 
     public Vector3 moveInput;
 
-    
-
-
-
     // Start is called before the first frame update
     void Start()
     {
@@ -56,6 +52,11 @@ public class Player : MonoBehaviour
         {
             nearestLocation = collider.gameObject;
         }
+    }
+
+    public GameObject getNearestLocation()
+    {
+        return nearestLocation;
     }
 
 }

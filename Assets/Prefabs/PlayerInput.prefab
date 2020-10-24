@@ -73,7 +73,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 5cf44699-34b6-4034-80ff-979dbbc1ee96
     m_ActionName: PlayerMovement/Movement[/Keyboard/z,/Keyboard/s,/Keyboard/q,/Keyboard/d]
-  m_NeverAutoSwitchControlSchemes: 0
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 593974b8-ad99-41ba-872a-5f998506f67d
+    m_ActionName: PlayerMovement/Use[/XInputControllerWindows/buttonSouth,/Keyboard/e]
+  m_NeverAutoSwitchControlSchemes: 1
   m_DefaultControlScheme: 
   m_DefaultActionMap: PlayerMovement
   m_SplitScreenIndex: -1

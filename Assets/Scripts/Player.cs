@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using static UnityEngine.InputSystem.InputAction;
 
 public class Player : MonoBehaviour
@@ -13,10 +14,18 @@ public class Player : MonoBehaviour
     private Vector2 moveVelocity;
     private GameObject nearestLocation; //Store the nearest shot location
 
+    public Image TimeBar;
+    public GameObject Canvas;
+
     [SerializeField]
     private int index_in_sequence = 0;
 
     public Vector3 moveInput;
+
+    private bool isDrinking = false;
+    [SerializeField]
+    private float drinkTimer = 1f;
+    private float drinkTime = 0f;
 
     // Start is called before the first frame update
     void Start()
@@ -33,13 +42,20 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //moveInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+
         moveVelocity = moveInput.normalized * speed;
 
-        /*if (Input.GetKeyDown(KeyCode.T))
+        if (isDrinking)
         {
-            Debug.Log(nearestLocation.name);
-        }*/
+            drinkTime += Time.deltaTime;
+            TimeBar.fillAmount = (drinkTimer - drinkTime) / drinkTimer;
+            if (drinkTime >= drinkTimer)
+            {
+                isDrinking = false;
+                drinkTime = 0;
+                Canvas.SetActive(false);
+            }
+        }
 
     }
 
@@ -60,6 +76,13 @@ public class Player : MonoBehaviour
     public GameObject getNearestLocation()
     {
         return nearestLocation;
+    }
+
+    public void Drinking()
+    {
+        Canvas.SetActive(true);
+        TimeBar.color = nearestLocation.transform.GetChild(0).GetChild(1).GetComponent<SpriteRenderer>().color;
+        isDrinking = true;
     }
 
     public int GetIndexInSequence() { return index_in_sequence; }

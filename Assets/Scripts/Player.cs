@@ -13,6 +13,7 @@ public class Player : MonoBehaviour
     private Rigidbody2D rb2d; //Player's rigidbody2D
     private Vector2 moveVelocity;
     private GameObject nearestLocation; //Store the nearest shot location
+    private PlayerInputHandler pIHandler;
 
     public Image TimeBar;
     public GameObject Canvas;
@@ -51,6 +52,7 @@ public class Player : MonoBehaviour
             TimeBar.fillAmount = (drinkTimer - drinkTime) / drinkTimer;
             if (drinkTime >= drinkTimer)
             {
+                pIHandler.reactivateInputs();
                 isDrinking = false;
                 drinkTime = 0;
                 Canvas.SetActive(false);
@@ -88,5 +90,9 @@ public class Player : MonoBehaviour
     public int GetIndexInSequence() { return index_in_sequence; }
     public void IncrementIndexInSequence() { ++index_in_sequence; }
 
+    public void SetPIHandler(PlayerInputHandler pih)
+    {
+        pIHandler = pih;
+    }
 
 }

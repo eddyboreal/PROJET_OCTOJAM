@@ -19,6 +19,7 @@ public class PlayerInputHandler : MonoBehaviour
     {
         playerInput = GetComponent<PlayerInput>();
         player = Instantiate(playerPrefab).GetComponent<Player>();
+        player.SetPIHandler(this);
         playerInput.actionEvents.ElementAt(0).AddListener(playerInput.GetComponent<PlayerInputHandler>().OnMove);
 
         buttonAction1 = new InputAction();
@@ -51,10 +52,16 @@ public class PlayerInputHandler : MonoBehaviour
             if (player.Shot_Sequence[player.GetIndexInSequence()] == player.GetComponent<Player>().getNearestLocation().transform.GetChild(0).GetComponent<Shot>().label 
                 && player.GetComponent<Player>().GetIndexInSequence() <= player.GetComponent<Player>().Shot_Sequence.Count)
             {
+                playerInput.DeactivateInput();
                 player.Drinking();
                 player.IncrementIndexInSequence();
                 player.GetComponent<Player>().getNearestLocation().transform.GetChild(0).GetComponent<Shot>().SelfDestruct();
             }
         }
+    }
+
+    public void reactivateInputs()
+    {
+        playerInput.ActivateInput();
     }
 }

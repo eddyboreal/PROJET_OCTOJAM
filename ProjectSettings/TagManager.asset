@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Shot
+  - Table
+  - Location
   layers:
   - Default
   - TransparentFX

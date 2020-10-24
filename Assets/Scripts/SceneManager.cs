@@ -83,6 +83,7 @@ public class SceneManager : MonoBehaviour
         {
             for (int i = 0; i < kvp.Value; ++i)
             {
+                Debug.Log("shot");
                 GameObject shot = Instantiate(Resources.Load("Shot")) as GameObject;
                 shot.GetComponent<Shot>().SetLabel(kvp.Key);
                 shot.GetComponent<Shot>().ApplyColor();

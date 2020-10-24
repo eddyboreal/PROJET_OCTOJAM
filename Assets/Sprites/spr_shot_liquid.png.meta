@@ -1,7 +1,79 @@
 fileFormatVersion: 2
 guid: ae2d42e09476e9e46bdb99746d7c96b2
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 2900315192505525196
+    second: spr_shot_liquid_0
+  - first:
+      213: 957452262358686158
+    second: spr_shot_liquid_1
+  - first:
+      213: 4187535386229049880
+    second: spr_shot_liquid_2
+  - first:
+      213: 8486557928197863036
+    second: spr_shot_liquid_3
+  - first:
+      213: 5822374968018843842
+    second: spr_shot_liquid_4
+  - first:
+      213: -8127595827929498024
+    second: spr_shot_liquid_5
+  - first:
+      213: -5435746479124064026
+    second: spr_shot_liquid_6
+  - first:
+      213: -8330143772647394270
+    second: spr_shot_liquid_7
+  - first:
+      213: -7460660002264244319
+    second: spr_shot_liquid_8
+  - first:
+      213: -760523225187801214
+    second: spr_shot_liquid_9
+  - first:
+      213: 7893699987163087246
+    second: spr_shot_liquid_10
+  - first:
+      213: -88287268866305610
+    second: spr_shot_liquid_11
+  - first:
+      213: -3946837938035803343
+    second: spr_shot_liquid_0
+  - first:
+      213: -8464760566018545211
+    second: spr_shot_liquid_1
+  - first:
+      213: 2283012716621935777
+    second: spr_shot_liquid_2
+  - first:
+      213: -8915635816088598162
+    second: spr_shot_liquid_3
+  - first:
+      213: 9198236802630251372
+    second: spr_shot_liquid_4
+  - first:
+      213: -2130040936727979898
+    second: spr_shot_liquid_5
+  - first:
+      213: 8848017432050856998
+    second: spr_shot_liquid_6
+  - first:
+      213: 6586160015611337660
+    second: spr_shot_liquid_7
+  - first:
+      213: -3646498910290909469
+    second: spr_shot_liquid_8
+  - first:
+      213: -3641675916460731324
+    second: spr_shot_liquid_9
+  - first:
+      213: -5306393930885741784
+    second: spr_shot_liquid_10
+  - first:
+      213: 5461039824164158732
+    second: spr_shot_liquid_11
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -40,12 +112,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 25
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -71,9 +143,273 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: spr_shot_liquid_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 51
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13b375d7ec30a39c0800000000000000
+      internalID: -3946837938035803343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_shot_liquid_1
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 51
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c9eab90d11278a80800000000000000
+      internalID: -8464760566018545211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_shot_liquid_2
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 51
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a433f748f3eeaf10800000000000000
+      internalID: 2283012716621935777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_shot_liquid_3
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 35
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e690a4b567c454480800000000000000
+      internalID: -8915635816088598162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_shot_liquid_4
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 35
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6373bc33a3b6af70800000000000000
+      internalID: 9198236802630251372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_shot_liquid_5
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 35
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 688d941bd039072e0800000000000000
+      internalID: -2130040936727979898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_shot_liquid_6
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 19
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 624fad3c9f87aca70800000000000000
+      internalID: 8848017432050856998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_shot_liquid_7
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 19
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbb1564a3adb66b50800000000000000
+      internalID: 6586160015611337660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_shot_liquid_8
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 19
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e6e242af88056dc0800000000000000
+      internalID: -3646498910290909469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_shot_liquid_9
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 3
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44453446c0b267dc0800000000000000
+      internalID: -3641675916460731324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_shot_liquid_10
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 3
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 823444795d6eb56b0800000000000000
+      internalID: -5306393930885741784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_shot_liquid_11
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 3
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0df09749c289cb40800000000000000
+      internalID: 5461039824164158732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

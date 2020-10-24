@@ -127,8 +127,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 184f671798914604d96f7a152269a6e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Shot_Sequence: []
   feets: {fileID: 6017586661413698541}
   speed: 10
+  moveInput: {x: 0, y: 0, z: 0}
+  playerIndex: 0
 --- !u!50 &8544783352021522534
 Rigidbody2D:
   serializedVersion: 4

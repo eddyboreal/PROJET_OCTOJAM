@@ -49,6 +49,11 @@ public class PlayerInputHandler : MonoBehaviour
         if (player != null)
         {
             Debug.Log(player.GetComponent<Player>().getNearestLocation().name);
+            if (player.Shot_Sequence[player.GetIndexInSequence()] == player.GetComponent<Player>().getNearestLocation().transform.GetChild(0).GetComponent<Shot>().label)
+            {
+                player.IncrementIndexInSequence();
+                player.GetComponent<Player>().getNearestLocation().transform.GetChild(0).GetComponent<Shot>().SelfDestruct();
+            }
         }
     }
 }

@@ -18,6 +18,9 @@ public class SceneManager : MonoBehaviour
     [SerializeField]
     private List<GameObject> _shots = new List<GameObject>();
 
+    private float timer = 3f;
+    private float time = 0f;
+
     // all the shots in the scene
     private Dictionary<string, int> shots = new Dictionary<string, int>
     {
@@ -31,21 +34,23 @@ public class SceneManager : MonoBehaviour
 
     void Start()
     {
-        players = GameObject.FindGameObjectsWithTag("Player");
-        locations = GameObject.FindGameObjectsWithTag("Location");
-        generateSequences();
-        generateAdditionalShots();
-        createShots();
-        locateShots();
+        
     }
 
-    /*void Update()
+    void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        time += Time.deltaTime;
+        if(time >= timer)
         {
-            foreach (KeyValuePair<string, int> kvp in shots) Debug.Log(kvp.Key + "/" + kvp.Value);
-        }    
-    } */
+            players = GameObject.FindGameObjectsWithTag("Player");
+            locations = GameObject.FindGameObjectsWithTag("Location");
+            generateSequences();
+            generateAdditionalShots();
+            createShots();
+            locateShots();
+            time = -99999999f;
+        }  
+    } 
 
     private void generateSequences()
     {

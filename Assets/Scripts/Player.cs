@@ -13,6 +13,9 @@ public class Player : MonoBehaviour
     private Vector2 moveVelocity;
     private GameObject nearestLocation; //Store the nearest shot location
 
+    [SerializeField]
+    private int index_in_sequence = 0;
+
     public Vector3 moveInput;
 
     // Start is called before the first frame update
@@ -58,5 +61,9 @@ public class Player : MonoBehaviour
     {
         return nearestLocation;
     }
+
+    public int GetIndexInSequence() { return index_in_sequence; }
+    public void IncrementIndexInSequence() { ++index_in_sequence; }
+
 
 }

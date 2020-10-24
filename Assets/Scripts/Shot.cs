@@ -46,4 +46,9 @@ public class Shot : MonoBehaviour
         }
     }
 
+    public void SelfDestruct()
+    {
+        Destroy(gameObject);
+    }
+
 }

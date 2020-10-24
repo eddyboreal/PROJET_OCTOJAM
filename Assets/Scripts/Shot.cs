@@ -5,16 +5,11 @@ using UnityEngine;
 public class Shot : MonoBehaviour
 {
     public string label;
-    // Start is called before the first frame update
+
     void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        // random first sprite played in the animation
+        this.gameObject.transform.GetChild(1).GetComponent<Animator>().Play("liquid_anim", 0, Random.value);
     }
 
     public void SetLabel(string label)

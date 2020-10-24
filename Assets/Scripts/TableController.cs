@@ -12,16 +12,14 @@ public class TableController : MonoBehaviour
     void Start()
     {
         //Place the shots on the table
-        Transform[] shotLocations = new Transform[6];
+        /*Transform[] shotLocations = new Transform[6];
 
         for (int i = 0; i < transform.childCount; i++)
         {
             shotLocations[i] = transform.GetChild(i);
             ShotsOnTheTable[i].transform.SetParent(shotLocations[i]);
             ShotsOnTheTable[i].transform.localPosition = new Vector3(0,0,-0.3f);
-        }
-        
-        
+        } */
     }
 
     // Update is called once per frame

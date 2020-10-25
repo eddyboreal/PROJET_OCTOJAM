@@ -7,6 +7,8 @@ public class ShowerChangingAppearance : MonoBehaviour
     // Start is called before the first frame update
     public Sprite showerNoWater;
     public Sprite showerWater;
+    public AudioClip ShowerSound;
+
     void Start()
     {
         

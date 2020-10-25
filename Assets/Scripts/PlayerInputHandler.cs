@@ -28,7 +28,8 @@ public class PlayerInputHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        AudioSource.PlayClipAtPoint(PlayerJoin, new Vector3());
+        GetComponent<AudioSource>().clip = PlayerJoin;
+        GetComponent<AudioSource>().Play();
         CanvasManagerMainScene = GameObject.FindGameObjectWithTag("CanvasManagerMainScene");
         CanvasManagerMainScene.GetComponent<CanvasManagerMainScene>().canvasPositions[CanvasManagerMainScene.GetComponent<CanvasManagerMainScene>().playersConnected].GetChild(0).gameObject.SetActive(false);
         myCanvas = Instantiate(CanvasPrefab, CanvasManagerMainScene.GetComponent<CanvasManagerMainScene>().canvasPositions[CanvasManagerMainScene.GetComponent<CanvasManagerMainScene>().playersConnected]);
@@ -94,6 +95,9 @@ public class PlayerInputHandler : MonoBehaviour
                     && player.GetIndexInSequence() <= player.Shot_Sequence.Count)
                 {
                     playerInput.DeactivateInput();
+                    GetComponent<AudioSource>().loop = true;
+                    GetComponent<AudioSource>().clip = PlayerDrink;
+                    GetComponent<AudioSource>().Play();
                     player.Drinking();
                     player.IncrementIndexInSequence();
                     player.getNearestLocation().transform.GetChild(0).GetComponent<Shot>().SelfDestruct();
@@ -116,7 +120,8 @@ public class PlayerInputHandler : MonoBehaviour
         myCanvas.transform.GetChild(2).gameObject.SetActive(!myCanvas.transform.GetChild(2).gameObject.activeInHierarchy);
         if (myCanvas.transform.GetChild(2).gameObject.activeInHierarchy)
         {
-            AudioSource.PlayClipAtPoint(PlayerReady, new Vector3());
+            GetComponent<AudioSource>().clip = PlayerReady;
+            GetComponent<AudioSource>().Play();
             CanvasManagerMainScene.GetComponent<CanvasManagerMainScene>().playersReady++;
         }
         else
@@ -129,6 +134,10 @@ public class PlayerInputHandler : MonoBehaviour
 
         public void reactivateInputs()
     {
+        if(GetComponent<AudioSource>().clip == PlayerDrink)
+        {
+            GetComponent<AudioSource>().Stop();
+        }
         playerInput.ActivateInput();
     }
 }

@@ -40,7 +40,7 @@ public class Player : MonoBehaviour
     private float immobilizedMaxTime = 6f;
     private float showerTimer;
     public bool isInTheShower = false;
-    private float showerEffectTime = 1f;
+    private float showerEffectTime = 0.5f;
 
     public bool hasWon = false;
     // Start is called before the first frame update
@@ -137,6 +137,7 @@ public class Player : MonoBehaviour
         }
         if (collider.gameObject.tag == "Douche" && pimentometer > 0)
         {
+            //collider.gameObject.GetComponent<AudioSource>().Play(collider.GetComponent<ShowerChangingAppearance>().ShowerSound);
             isInTheShower = true;
             collider.GetComponent<SpriteRenderer>().sprite = collider.GetComponent<ShowerChangingAppearance>().showerWater;
             collider.GetComponent<Animator>().enabled = true;

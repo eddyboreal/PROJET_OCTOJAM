@@ -9,6 +9,7 @@ TagManager:
   - Location
   - Ardoise
   - CanvasManager
+  - El Bermillon
   layers:
   - Default
   - TransparentFX

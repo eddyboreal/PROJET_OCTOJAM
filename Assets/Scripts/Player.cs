@@ -35,6 +35,8 @@ public class Player : MonoBehaviour
 
     private int pimentometer = 0;
 
+    public bool hasWon = false;
+
 
     // Start is called before the first frame update
     void Start()
@@ -42,6 +44,7 @@ public class Player : MonoBehaviour
         //playerIndex = playerIndex++;
         rb2d = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        ArdoiseCanvas.GetComponent<Canvas>().enabled = false;
     }
 
     public int GetPlayerIndex()
@@ -78,6 +81,8 @@ public class Player : MonoBehaviour
                 drinkTime = 0;
                 Canvas.SetActive(false);
                 pimentometer += Random.Range(1, 2);
+
+                ArdoiseCanvas.transform.GetChild(index_in_sequence).GetComponent<Image>().gameObject.SetActive(false);
             }
         }
 
@@ -100,6 +105,7 @@ public class Player : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         nearestLocation = null;
+        if(collision.gameObject.CompareTag("Ardoise")) ShowArdoise(false);
     }
 
     public GameObject getNearestLocation()
@@ -122,8 +128,40 @@ public class Player : MonoBehaviour
         pIHandler = pih;
     }
 
-    private void collorizeSequenceInArdoise()
+    public void collorizeSequenceInArdoise()
     {
-        //ArdoiseCanvas.transform.
+        for(int i = 0; i < Shot_Sequence.Count; ++i)
+        {
+            switch (Shot_Sequence[i])
+            {
+                case "El Verdito":
+                    ArdoiseCanvas.transform.GetChild(i+1).GetComponent<Image>().color = Color.green;
+                    break;
+                case "El Naranjo":
+                    ArdoiseCanvas.transform.GetChild(i + 1).GetComponent<Image>().color = new Color(0.96f, 0.54f, 0f);
+                    break;
+                case "La Rosita":
+                    ArdoiseCanvas.transform.GetChild(i + 1).GetComponent<Image>().color = new Color(0.96f, 0.22f, 0.95f);
+                    break;
+                case "La Negrita":
+                    ArdoiseCanvas.transform.GetChild(i + 1).GetComponent<Image>().color = Color.black;
+                    break;
+                case "El Bermillon":
+                    ArdoiseCanvas.transform.GetChild(i + 1).GetComponent<Image>().color = new Color(0.70f, 0.22f, 0.07f);
+                    break;
+                case "El Grisito":
+                    ArdoiseCanvas.transform.GetChild(i + 1).GetComponent<Image>().color = Color.gray;
+                    break;
+                default:
+                    Color c = Color.white;
+                    break;
+            }
+        }
     }
+
+    public void ShowArdoise(bool b)
+    {
+        ArdoiseCanvas.GetComponent<Canvas>().enabled = b;
+    }
+
 }

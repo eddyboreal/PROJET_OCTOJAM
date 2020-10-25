@@ -5,6 +5,10 @@ using UnityEngine;
 
 public class SceneManager : MonoBehaviour
 {
+    // Audio Manager
+    public GameObject am;
+    // Music Manager
+    public GameObject mm;
     // list of players spawned in the scene
     private GameObject[] players;
     // list of locations in the scene
@@ -36,7 +40,8 @@ public class SceneManager : MonoBehaviour
 
     void Start()
     {
-        
+        am = GameObject.FindGameObjectWithTag("AudioManager");
+        mm = GameObject.FindGameObjectWithTag("MusicManager");
     }
 
     void Update()
@@ -121,5 +126,8 @@ public class SceneManager : MonoBehaviour
         generateAdditionalShots();
         createShots();
         locateShots();
+        am.GetComponent<AudioSource>().clip = am.GetComponent<AudioManager>().MainMusic;
+        am.GetComponent<AudioSource>().Play();
+        mm.GetComponent<AudioSource>().Stop();
     }
 }

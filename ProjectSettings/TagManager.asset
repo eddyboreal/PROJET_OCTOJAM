@@ -12,6 +12,8 @@ TagManager:
   - Douche
   - El Bermillon
   - CanvasManagerMainScene
+  - AudioManager
+  - MusicManager
   layers:
   - Default
   - TransparentFX

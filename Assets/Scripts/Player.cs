@@ -13,11 +13,15 @@ public class Player : MonoBehaviour
     private Rigidbody2D rb2d; //Player's rigidbody2D
     private Animator animator;
     private Vector2 moveVelocity;
+    [SerializeField]
     private GameObject nearestLocation; //Store the nearest shot location
     private PlayerInputHandler pIHandler;
 
     public Image TimeBar;
     public GameObject Canvas;
+
+    // self ardoise
+    public Canvas ArdoiseCanvas;
 
     [SerializeField]
     private int index_in_sequence = 0;
@@ -28,6 +32,9 @@ public class Player : MonoBehaviour
     [SerializeField]
     private float drinkTimer = 1f;
     private float drinkTime = 0f;
+
+    private int pimentometer = 0;
+
 
     // Start is called before the first frame update
     void Start()
@@ -70,6 +77,7 @@ public class Player : MonoBehaviour
                 isDrinking = false;
                 drinkTime = 0;
                 Canvas.SetActive(false);
+                pimentometer += Random.Range(1, 2);
             }
         }
 
@@ -83,10 +91,15 @@ public class Player : MonoBehaviour
     //Detects nearest shot
     void OnTriggerStay2D(Collider2D collider)
     {
-        if(nearestLocation == null || Vector3.Distance(collider.gameObject.transform.position,feets.position) <= Vector3.Distance(nearestLocation.transform.position, feets.position))
+        if (nearestLocation == null || Vector3.Distance(collider.gameObject.transform.position, feets.position) <= Vector3.Distance(nearestLocation.transform.position, feets.position))
         {
-            nearestLocation = collider.gameObject;
+            if(collider.gameObject) nearestLocation = collider.gameObject;
         }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        nearestLocation = null;
     }
 
     public GameObject getNearestLocation()
@@ -109,4 +122,8 @@ public class Player : MonoBehaviour
         pIHandler = pih;
     }
 
+    private void collorizeSequenceInArdoise()
+    {
+        //ArdoiseCanvas.transform.
+    }
 }

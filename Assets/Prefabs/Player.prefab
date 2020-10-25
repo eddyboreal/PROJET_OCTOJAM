@@ -1261,7 +1261,12 @@ MonoBehaviour:
   ArdoiseCanvas: {fileID: 7025767409412869362}
   index_in_sequence: 0
   moveInput: {x: 0, y: 0, z: 0}
+  isDrinking: 0
   drinkTimer: 1
+  pimentometer: 0
+  isImmobilized: 0
+  hasInvertedControls: 0
+  hasWon: 0
 --- !u!50 &8544783352021522534
 Rigidbody2D:
   serializedVersion: 4
@@ -1322,8 +1327,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.3, y: 1.28}
+  m_Offset: {x: 0.020316005, y: -0.018325567}
+  m_Size: {x: 0.56593895, y: 1.2842002}
   m_Direction: 0
 --- !u!95 &4614923182849343361
 Animator:

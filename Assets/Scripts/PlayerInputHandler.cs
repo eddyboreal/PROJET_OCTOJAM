@@ -54,13 +54,24 @@ public class PlayerInputHandler : MonoBehaviour
         {
             GetReady();
         }
+        if (player.isImmobilized)
+        {
+            playerInput.DeactivateInput();
+        } 
+        else if (!player.isDrinking)
+        {
+            reactivateInputs();
+        }
 
     }
 
 
     public void OnMove(CallbackContext context)
     {
-        if(player != null)
+         if (player.hasInvertedControls)
+        {
+            player.moveInput = -context.ReadValue<Vector2>();
+        } else if (player != null)
         {
             player.moveInput = context.ReadValue<Vector2>();
         }
@@ -83,7 +94,12 @@ public class PlayerInputHandler : MonoBehaviour
             }
 
             else if (player.getNearestLocation().CompareTag("Ardoise")){
-                Debug.Log("Ardoise");
+                player.ShowArdoise(true);
+            }
+            else if(player.GetIndexInSequence() == player.Shot_Sequence.Count && player.getNearestLocation().CompareTag("El Bermillon"))
+            {
+                player.hasWon = true;
+                Debug.Log("A player has won");
             }
         }
     }

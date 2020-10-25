@@ -13,7 +13,7 @@ public class SceneManager : MonoBehaviour
     private int sequences_length = 6;
     // number of shots added arbitrary in the scene
     [SerializeField]
-    private int nb_additional_shots = 6;
+    private int nb_additional_shots = 4;
     // list of shot objects spawned in the scene
     [SerializeField]
     private List<GameObject> _shots = new List<GameObject>();
@@ -104,6 +104,13 @@ public class SceneManager : MonoBehaviour
             s.transform.localPosition = new Vector3(0, 0, -0.3f);
             _locationsL.RemoveAt(index);
         }
+        sequenceInArdoise();
+    }
+
+    // colorize Player sequence in ardoize
+    private void sequenceInArdoise()
+    {
+        foreach (GameObject p in players) p.GetComponent<Player>().collorizeSequenceInArdoise();
     }
 
     public void LauchGame()

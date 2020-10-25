@@ -9,6 +9,8 @@ TagManager:
   - Location
   - Ardoise
   - CanvasManager
+  - Douche
+  - El Bermillon
   - CanvasManagerMainScene
   layers:
   - Default

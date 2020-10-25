@@ -43,6 +43,9 @@ public class Player : MonoBehaviour
     private float showerEffectTime = 0.5f;
 
     public bool hasWon = false;
+
+    public AudioClip showerSound;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -104,7 +107,6 @@ public class Player : MonoBehaviour
 
         if (isDrinking)
         {
-            //GetComponent<AudioSource>().Play(A)
             drinkTime += Time.deltaTime;
             TimeBar.fillAmount = (drinkTimer - drinkTime) / drinkTimer;
             animator.SetBool("drinking", true);
@@ -137,7 +139,10 @@ public class Player : MonoBehaviour
         }
         if (collider.gameObject.tag == "Douche" && pimentometer > 0)
         {
-            //collider.gameObject.GetComponent<AudioSource>().Play(collider.GetComponent<ShowerChangingAppearance>().ShowerSound);
+            collider.GetComponent<AudioSource>().clip = collider.GetComponent<ShowerChangingAppearance>().ShowerSound;
+            collider.GetComponent<AudioSource>().loop = true;
+            collider.GetComponent<AudioSource>().Play();
+            collider.gameObject.GetComponent<AudioSource>().Play();
             isInTheShower = true;
             collider.GetComponent<SpriteRenderer>().sprite = collider.GetComponent<ShowerChangingAppearance>().showerWater;
             collider.GetComponent<Animator>().enabled = true;
@@ -149,6 +154,7 @@ public class Player : MonoBehaviour
         nearestLocation = null;
         if (collision.gameObject.tag == "Douche")
         {
+            collision.GetComponent<AudioSource>().Stop();
             isInTheShower = false;
             collision.GetComponent<SpriteRenderer>().sprite = collision.GetComponent<ShowerChangingAppearance>().showerNoWater;
             collision.GetComponent<Animator>().enabled = false;

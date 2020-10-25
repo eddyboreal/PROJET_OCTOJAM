@@ -198,7 +198,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &288732660899772126
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1266,6 +1266,7 @@ MonoBehaviour:
   pimentometer: 0
   isImmobilized: 0
   hasInvertedControls: 0
+  isInTheShower: 0
   hasWon: 0
 --- !u!50 &8544783352021522534
 Rigidbody2D:

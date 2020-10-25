@@ -94,7 +94,7 @@ MonoBehaviour:
     m_ActionName: MainMenuACtionMap/New action[/Keyboard/enter]
   m_NeverAutoSwitchControlSchemes: 1
   m_DefaultControlScheme: 
-  m_DefaultActionMap: 6544baa7-bb78-49d7-ad88-c37646b13f32
+  m_DefaultActionMap: PlayerMovement
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
 --- !u!114 &3240727977777546014
@@ -111,3 +111,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerPrefab: {fileID: 5103017895601115118, guid: 97331007ef7bea74f895c12f2a662377,
     type: 3}
+  CanvasPrefab: {fileID: 135400684192957844, guid: ee91de34f9d0b62469c74c4a9a8806fb,
+    type: 3}
+  CanvasManagerMainScene: {fileID: 0}

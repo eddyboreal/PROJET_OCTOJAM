@@ -13,7 +13,7 @@ public class SceneManager : MonoBehaviour
     private int sequences_length = 6;
     // number of shots added arbitrary in the scene
     [SerializeField]
-    private int nb_additional_shots = 6;
+    private int nb_additional_shots = 4;
     // list of shot objects spawned in the scene
     [SerializeField]
     private List<GameObject> _shots = new List<GameObject>();
@@ -44,12 +44,7 @@ public class SceneManager : MonoBehaviour
         time += Time.deltaTime;
         if(time >= timer)
         {
-            players = GameObject.FindGameObjectsWithTag("Player");
-            locations = GameObject.FindGameObjectsWithTag("Location");
-            generateSequences();
-            generateAdditionalShots();
-            createShots();
-            locateShots();
+            
             time = -99999999f;
         }  
     } 
@@ -116,5 +111,15 @@ public class SceneManager : MonoBehaviour
     private void sequenceInArdoise()
     {
         foreach (GameObject p in players) p.GetComponent<Player>().collorizeSequenceInArdoise();
+    }
+
+    public void LauchGame()
+    {
+        players = GameObject.FindGameObjectsWithTag("Player");
+        locations = GameObject.FindGameObjectsWithTag("Location");
+        generateSequences();
+        generateAdditionalShots();
+        createShots();
+        locateShots();
     }
 }

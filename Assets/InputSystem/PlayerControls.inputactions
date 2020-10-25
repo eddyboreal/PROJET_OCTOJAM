@@ -20,6 +20,14 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "GetReady",
+                    "type": "Button",
+                    "id": "c044fd8a-a841-42e1-84f5-5099558c08a9",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -163,6 +171,39 @@
                     "processors": "",
                     "groups": "Keyboard",
                     "action": "Use",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "534a6e27-e81a-4526-b6e1-8c14c95b5b36",
+                    "path": "<Gamepad>/start",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "GetReady",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ab2e3488-f105-4ee2-af62-94cc862cb07a",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "GamePad",
+                    "action": "GetReady",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "01115c42-eba8-4406-8b56-93ce848fd73b",
+                    "path": "<Keyboard>/enter",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "GetReady",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -13,7 +13,7 @@ public class SceneManager : MonoBehaviour
     private int sequences_length = 6;
     // number of shots added arbitrary in the scene
     [SerializeField]
-    private int nb_additional_shots = 6;
+    private int nb_additional_shots = 4;
     // list of shot objects spawned in the scene
     [SerializeField]
     private List<GameObject> _shots = new List<GameObject>();

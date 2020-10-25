@@ -38,6 +38,9 @@ public class Player : MonoBehaviour
     public bool isImmobilized = false;
     public bool hasInvertedControls = false;
     private float immobilizedMaxTime = 6f;
+    private float showerTimer;
+    public bool isInTheShower = false;
+    private float showerEffectTime = 1f;
 
     public bool hasWon = false;
     // Start is called before the first frame update
@@ -57,19 +60,31 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isImmobilized)
-        {
-            immobilizedTimer += Time.deltaTime;
+        if (isImmobilized)
+        {
+            immobilizedTimer += Time.deltaTime;
         }
-        if (immobilizedTimer >= immobilizedMaxTime)
-        {
-            immobilizedTimer = 0;
-            isImmobilized = false;
-            pimentometer = 3;
-            hasInvertedControls = false;
-            UpdatePimentometerEffects();
-            this.gameObject.transform.GetChild(2).GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);
+        if (immobilizedTimer >= immobilizedMaxTime)
+        {
+            immobilizedTimer = 0;
+            isImmobilized = false;
+            pimentometer = 3;
+            hasInvertedControls = false;
+            UpdatePimentometerEffects();
+            this.gameObject.transform.GetChild(2).GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);
         }
+
+        if (isInTheShower && pimentometer > 0)
+        {
+            showerTimer += Time.deltaTime;
+        }
+        if (showerTimer >= showerEffectTime)
+        {
+            showerTimer = 0;
+            pimentometer--;
+            UpdatePimentometerEffects();
+        }
+
         moveVelocity = moveInput.normalized * speed;
 
         if(moveVelocity.magnitude != 0 && !isDrinking)
@@ -114,11 +129,19 @@ public class Player : MonoBehaviour
         {
             if(collider.gameObject) nearestLocation = collider.gameObject;
         }
+        if (collider.gameObject.tag == "Douche")
+        {
+            isInTheShower = true;
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
         nearestLocation = null;
+        if (collision.gameObject.tag == "Douche")
+        {
+            isInTheShower = false;
+        }
         if(collision.gameObject.CompareTag("Ardoise")) ShowArdoise(false);
     }
 
@@ -179,18 +202,21 @@ public class Player : MonoBehaviour
     }
 
 
-    private void UpdatePimentometerEffects()
-    {
-        this.gameObject.transform.GetChild(0).GetComponent<SpriteRenderer>().color = new Color(1, 1-(pimentometer * 0.16f), 1-(pimentometer * 0.16f), 1);
-        speed = 10 - (pimentometer * 1); 
-        if (pimentometer >= 6)
-        {
-            isImmobilized = true;
-            this.gameObject.transform.GetChild(2).GetComponent<SpriteRenderer>().color = new Color(1, 0, 0, 1);
-        } else if (pimentometer >= 4)
-        {
-            hasInvertedControls = true;
-        }
+    private void UpdatePimentometerEffects()
+    {
+        this.gameObject.transform.GetChild(0).GetComponent<SpriteRenderer>().color = new Color(1, 1-(pimentometer * 0.16f), 1-(pimentometer * 0.16f), 1);
+        speed = 10 - (pimentometer * 1); 
+        if (pimentometer >= 6)
+        {
+            isImmobilized = true;
+            this.gameObject.transform.GetChild(2).GetComponent<SpriteRenderer>().color = new Color(1, 0, 0, 1);
+        } else if (pimentometer >= 4)
+        {
+            hasInvertedControls = true;
+        } else if (pimentometer < 4)
+        {
+            hasInvertedControls = false; 
+        }
     }
 
   

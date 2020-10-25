@@ -35,7 +35,6 @@ public class PlayerInputUI : MonoBehaviour
 
     public void OnMenuClick()
     {
-        Debug.Log("chiasse");
         CanvasManager.GetComponent<CanvasManager>().OnMainMenuClick();
     }
 }

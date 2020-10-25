@@ -44,8 +44,6 @@ public class Player : MonoBehaviour
 
     public bool hasWon = false;
 
-    public AudioClip showerSound;
-
     // Start is called before the first frame update
     void Start()
     {

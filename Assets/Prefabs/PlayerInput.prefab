@@ -122,6 +122,8 @@ MonoBehaviour:
   PlayerJoin: {fileID: 8300000, guid: 1dc53396273fcc14893c69a669642270, type: 3}
   PlayerReady: {fileID: 8300000, guid: 3954d3f80997a4745aef26766d6e2e3e, type: 3}
   PlayerDrink: {fileID: 8300000, guid: ae3e5876712141042a228600c14815e8, type: 3}
+  SceneManager: {fileID: 2628296631463308566, guid: 2348a4d9b29f23242951c481b8b75faf,
+    type: 3}
 --- !u!82 &-4731928351020783647
 AudioSource:
   m_ObjectHideFlags: 0
@@ -140,7 +142,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 20
+  Priority: 6
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500

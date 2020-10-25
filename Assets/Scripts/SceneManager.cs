@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SceneManager : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class SceneManager : MonoBehaviour
     public GameObject am;
     // Music Manager
     public GameObject mm;
+    //Ending Screen
+    public GameObject es;
     // list of players spawned in the scene
     private GameObject[] players;
     // list of locations in the scene
@@ -42,6 +45,7 @@ public class SceneManager : MonoBehaviour
     {
         am = GameObject.FindGameObjectWithTag("AudioManager");
         mm = GameObject.FindGameObjectWithTag("MusicManager");
+        es = GameObject.FindGameObjectWithTag("EndingScreen");
     }
 
     void Update()
@@ -129,5 +133,10 @@ public class SceneManager : MonoBehaviour
         am.GetComponent<AudioSource>().clip = am.GetComponent<AudioManager>().MainMusic;
         am.GetComponent<AudioSource>().Play();
         mm.GetComponent<AudioSource>().Stop();
+    }
+
+    public void endGame()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex + 1);
     }
 }

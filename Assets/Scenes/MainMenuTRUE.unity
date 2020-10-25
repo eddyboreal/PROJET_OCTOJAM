@@ -140,9 +140,39 @@ PrefabInstance:
       objectReference: {fileID: 462909270}
     - target: {fileID: 1976455493375233539, guid: 202ae2c97e031474782487f1ed47e60c,
         type: 3}
+      propertyPath: m_ActionEvents.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1976455493375233539, guid: 202ae2c97e031474782487f1ed47e60c,
+        type: 3}
       propertyPath: m_UIInputModule
       value: 
       objectReference: {fileID: 1480870216}
+    - target: {fileID: 1976455493375233539, guid: 202ae2c97e031474782487f1ed47e60c,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 874263154}
+    - target: {fileID: 1976455493375233539, guid: 202ae2c97e031474782487f1ed47e60c,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_ActionId
+      value: c044fd8a-a841-42e1-84f5-5099558c08a9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1976455493375233539, guid: 202ae2c97e031474782487f1ed47e60c,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_ActionName
+      value: PlayerMovement/GetReady[/XInputControllerWindows/start,/Keyboard/enter]
+      objectReference: {fileID: 0}
+    - target: {fileID: 1976455493375233539, guid: 202ae2c97e031474782487f1ed47e60c,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnMenuClick
+      objectReference: {fileID: 0}
+    - target: {fileID: 1976455493375233539, guid: 202ae2c97e031474782487f1ed47e60c,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 1976455493375233540, guid: 202ae2c97e031474782487f1ed47e60c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -374,6 +404,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &874263154 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1976455493375233538, guid: 202ae2c97e031474782487f1ed47e60c,
+    type: 3}
+  m_PrefabInstance: {fileID: 66164321}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31ffde066baa7f74fbca64181fbcfee8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &886712817 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2495206883640449523, guid: 54e7abc8cc449f04bb8c56b372481dd8,

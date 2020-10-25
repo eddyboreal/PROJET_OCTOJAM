@@ -21,8 +21,8 @@ public class PlayerInputHandler : MonoBehaviour
     public AudioClip PlayerJoin;
     public AudioClip PlayerReady;
     public AudioClip PlayerDrink;
-    
 
+    public GameObject SceneManager;
 
 
     // Start is called before the first frame update
@@ -111,6 +111,7 @@ public class PlayerInputHandler : MonoBehaviour
             {
                 player.hasWon = true;
                 Debug.Log("A player has won");
+                SceneManager.GetComponent<SceneManager>().endGame();
             }
         }
     }

@@ -43,3 +43,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 202bc7809d3b6014aa42b86f91dbffec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  am: {fileID: 0}
+  mm: {fileID: 0}
+  es: {fileID: 8991422308646433163, guid: d87c1f0a39d7ba04d9c43408e5455aef, type: 3}
+  nb_additional_shots: 4
+  _shots: []

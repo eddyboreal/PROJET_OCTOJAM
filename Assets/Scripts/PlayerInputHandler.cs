@@ -77,11 +77,15 @@ public class PlayerInputHandler : MonoBehaviour
             }
 
             else if (player.getNearestLocation().CompareTag("Ardoise")){
-                Debug.Log("Ardoise");
+                player.ShowArdoise(true);
+            }
+            else if(player.GetIndexInSequence() == player.Shot_Sequence.Count && player.getNearestLocation().CompareTag("El Bermillon"))
+            {
+                player.hasWon = true;
+                Debug.Log("A player has won");
             }
         }
     }
-
 
     public void reactivateInputs()
     {

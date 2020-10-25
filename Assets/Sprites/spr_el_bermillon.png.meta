@@ -1,7 +1,55 @@
 fileFormatVersion: 2
 guid: 9131f4fe3b8808f44b985ce15fa84c3b
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -8173013101886085846
+    second: spr_el_bermillon_0
+  - first:
+      213: 3802233466845867376
+    second: spr_el_bermillon_1
+  - first:
+      213: 6135816066567933672
+    second: spr_el_bermillon_2
+  - first:
+      213: 7243595310675018224
+    second: spr_el_bermillon_3
+  - first:
+      213: -6340837971311224216
+    second: spr_el_bermillon_4
+  - first:
+      213: -3536516410328108782
+    second: spr_el_bermillon_5
+  - first:
+      213: 8947416524066201509
+    second: spr_el_bermillon_6
+  - first:
+      213: 7529442258367541897
+    second: spr_el_bermillon_7
+  - first:
+      213: -924255116704594026
+    second: spr_el_bermillon_8
+  - first:
+      213: -6538483019131141789
+    second: spr_el_bermillon_9
+  - first:
+      213: -7779842489982545091
+    second: spr_el_bermillon_10
+  - first:
+      213: 7113158593400083084
+    second: spr_el_bermillon_11
+  - first:
+      213: -8172650965661670388
+    second: spr_el_bermillon_12
+  - first:
+      213: 2288640096450602022
+    second: spr_el_bermillon_13
+  - first:
+      213: 7432216758256827378
+    second: spr_el_bermillon_14
+  - first:
+      213: -1531315599494968275
+    second: spr_el_bermillon_15
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -40,7 +88,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -71,9 +119,357 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: spr_el_bermillon_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 126
+        width: 35
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a256775e2ef939e80800000000000000
+      internalID: -8173013101886085846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_el_bermillon_1
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 126
+        width: 35
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07d2378613f34c430800000000000000
+      internalID: 3802233466845867376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_el_bermillon_2
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 126
+        width: 35
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ee8aee143cc62550800000000000000
+      internalID: 6135816066567933672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_el_bermillon_3
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 126
+        width: 35
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f1487d8e8b668460800000000000000
+      internalID: 7243595310675018224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_el_bermillon_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 84
+        width: 35
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86a9fa5d571d008a0800000000000000
+      internalID: -6340837971311224216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_el_bermillon_5
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 84
+        width: 35
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 211bd04ef05cbeec0800000000000000
+      internalID: -3536516410328108782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_el_bermillon_6
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 84
+        width: 35
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5af1d665ceb9b2c70800000000000000
+      internalID: 8947416524066201509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_el_bermillon_7
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 84
+        width: 35
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 982ffce57d3fd7860800000000000000
+      internalID: 7529442258367541897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_el_bermillon_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 42
+        width: 35
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6974cf64ed26c23f0800000000000000
+      internalID: -924255116704594026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_el_bermillon_9
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 42
+        width: 35
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 361c3c22654a245a0800000000000000
+      internalID: -6538483019131141789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_el_bermillon_10
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 42
+        width: 35
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3399188972780490800000000000000
+      internalID: -7779842489982545091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_el_bermillon_11
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 42
+        width: 35
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8211a6bd0407b260800000000000000
+      internalID: 7113158593400083084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_el_bermillon_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 35
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c04ab7e4f39e49e80800000000000000
+      internalID: -8172650965661670388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_el_bermillon_13
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 0
+        width: 35
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62467afba02e2cf10800000000000000
+      internalID: 2288640096450602022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_el_bermillon_14
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 0
+        width: 35
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fb7a9993c9842760800000000000000
+      internalID: 7432216758256827378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_el_bermillon_15
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 0
+        width: 35
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2c8615539cafbae0800000000000000
+      internalID: -1531315599494968275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

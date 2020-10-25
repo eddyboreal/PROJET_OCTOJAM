@@ -109,5 +109,12 @@ public class SceneManager : MonoBehaviour
             s.transform.localPosition = new Vector3(0, 0, -0.3f);
             _locationsL.RemoveAt(index);
         }
+        sequenceInArdoise();
+    }
+
+    // colorize Player sequence in ardoize
+    private void sequenceInArdoise()
+    {
+        foreach (GameObject p in players) p.GetComponent<Player>().collorizeSequenceInArdoise();
     }
 }

@@ -372,7 +372,8 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Icon
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000,
+        type: 0}
     - target: {fileID: 4814914156932545844, guid: 505f5a953d0fe124e9bcf278a7746f60,
         type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[1].x
@@ -502,7 +503,8 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Icon
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000,
+        type: 0}
     - target: {fileID: 4814914156932545844, guid: 505f5a953d0fe124e9bcf278a7746f60,
         type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.size
@@ -647,7 +649,8 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Icon
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000,
+        type: 0}
     - target: {fileID: 4814914156932545844, guid: 505f5a953d0fe124e9bcf278a7746f60,
         type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.size
@@ -792,7 +795,8 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Icon
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000,
+        type: 0}
     - target: {fileID: 4814914156932545844, guid: 505f5a953d0fe124e9bcf278a7746f60,
         type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[1].x
@@ -917,7 +921,8 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Icon
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000,
+        type: 0}
     - target: {fileID: 4814914156932545844, guid: 505f5a953d0fe124e9bcf278a7746f60,
         type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[1].x
@@ -1047,7 +1052,8 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Icon
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000,
+        type: 0}
     - target: {fileID: 4814914156932545844, guid: 505f5a953d0fe124e9bcf278a7746f60,
         type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.size

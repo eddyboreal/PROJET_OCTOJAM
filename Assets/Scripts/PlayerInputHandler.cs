@@ -47,15 +47,22 @@ public class PlayerInputHandler : MonoBehaviour
 
     public void OnUse()
     {
-        if (player != null)
+        if (player != null && player.getNearestLocation() != null)
         {
-            if (player.Shot_Sequence[player.GetIndexInSequence()] == player.GetComponent<Player>().getNearestLocation().transform.GetChild(0).GetComponent<Shot>().label 
-                && player.GetComponent<Player>().GetIndexInSequence() <= player.GetComponent<Player>().Shot_Sequence.Count)
+            if (player.getNearestLocation().CompareTag("Location"))
             {
-                playerInput.DeactivateInput();
-                player.Drinking();
-                player.IncrementIndexInSequence();
-                player.GetComponent<Player>().getNearestLocation().transform.GetChild(0).GetComponent<Shot>().SelfDestruct();
+                if (player.Shot_Sequence[player.GetIndexInSequence()] == player.getNearestLocation().transform.GetChild(0).GetComponent<Shot>().label
+                    && player.GetIndexInSequence() <= player.Shot_Sequence.Count)
+                {
+                    playerInput.DeactivateInput();
+                    player.Drinking();
+                    player.IncrementIndexInSequence();
+                    player.getNearestLocation().transform.GetChild(0).GetComponent<Shot>().SelfDestruct();
+                }
+            }
+
+            else if (player.getNearestLocation().CompareTag("Ardoise")){
+                Debug.Log("Ardoise");
             }
         }
     }

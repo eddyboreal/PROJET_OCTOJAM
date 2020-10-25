@@ -9,6 +9,7 @@ TagManager:
   - Location
   - Ardoise
   - CanvasManager
+  - CanvasManagerMainScene
   layers:
   - Default
   - TransparentFX

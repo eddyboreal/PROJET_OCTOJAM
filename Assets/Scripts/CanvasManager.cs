@@ -24,6 +24,7 @@ public class CanvasManager : MonoBehaviour
     {
         if(progression == 0)
         {
+            
             MainMenuImage.GetComponent<Animator>().SetBool("clicked", true);
             progression++;
         }

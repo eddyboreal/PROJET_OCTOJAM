@@ -44,12 +44,7 @@ public class SceneManager : MonoBehaviour
         time += Time.deltaTime;
         if(time >= timer)
         {
-            players = GameObject.FindGameObjectsWithTag("Player");
-            locations = GameObject.FindGameObjectsWithTag("Location");
-            generateSequences();
-            generateAdditionalShots();
-            createShots();
-            locateShots();
+            
             time = -99999999f;
         }  
     } 
@@ -109,5 +104,15 @@ public class SceneManager : MonoBehaviour
             s.transform.localPosition = new Vector3(0, 0, -0.3f);
             _locationsL.RemoveAt(index);
         }
+    }
+
+    public void LauchGame()
+    {
+        players = GameObject.FindGameObjectsWithTag("Player");
+        locations = GameObject.FindGameObjectsWithTag("Location");
+        generateSequences();
+        generateAdditionalShots();
+        createShots();
+        locateShots();
     }
 }

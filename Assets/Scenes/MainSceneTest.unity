@@ -1255,6 +1255,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5294975199527964239, guid: 815f84e18b25e3c40a25df15a0f34c56,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5294975199527964239, guid: 815f84e18b25e3c40a25df15a0f34c56,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5294975199527964239, guid: 815f84e18b25e3c40a25df15a0f34c56,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5294975199527964239, guid: 815f84e18b25e3c40a25df15a0f34c56,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5294975199527964239, guid: 815f84e18b25e3c40a25df15a0f34c56,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7105196228878730931, guid: 815f84e18b25e3c40a25df15a0f34c56,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1319,6 +1344,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: Table
+      objectReference: {fileID: 0}
+    - target: {fileID: 7105196228878730935, guid: 815f84e18b25e3c40a25df15a0f34c56,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8663182119078458041, guid: 815f84e18b25e3c40a25df15a0f34c56,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 815f84e18b25e3c40a25df15a0f34c56, type: 3}
@@ -1579,7 +1614,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0.13999999, y: 0.13999999, z: 0}
   m_MaxChunkCount: 16

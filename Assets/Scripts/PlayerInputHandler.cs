@@ -17,11 +17,17 @@ public class PlayerInputHandler : MonoBehaviour
     private InputAction buttonAction1;
     private InputAction buttonAction2;
 
+    //Sounds
+    public AudioClip PlayerJoin;
+    public AudioClip PlayerReady;
+    
+
 
 
     // Start is called before the first frame update
     void Start()
     {
+        AudioSource.PlayClipAtPoint(PlayerJoin, new Vector3());
         CanvasManagerMainScene = GameObject.FindGameObjectWithTag("CanvasManagerMainScene");
         CanvasManagerMainScene.GetComponent<CanvasManagerMainScene>().canvasPositions[CanvasManagerMainScene.GetComponent<CanvasManagerMainScene>().playersConnected].GetChild(0).gameObject.SetActive(false);
         myCanvas = Instantiate(CanvasPrefab, CanvasManagerMainScene.GetComponent<CanvasManagerMainScene>().canvasPositions[CanvasManagerMainScene.GetComponent<CanvasManagerMainScene>().playersConnected]);
@@ -109,6 +115,7 @@ public class PlayerInputHandler : MonoBehaviour
         myCanvas.transform.GetChild(2).gameObject.SetActive(!myCanvas.transform.GetChild(2).gameObject.activeInHierarchy);
         if (myCanvas.transform.GetChild(2).gameObject.activeInHierarchy)
         {
+            AudioSource.PlayClipAtPoint(PlayerReady, new Vector3());
             CanvasManagerMainScene.GetComponent<CanvasManagerMainScene>().playersReady++;
         }
         else

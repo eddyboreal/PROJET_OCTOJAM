@@ -84,6 +84,12 @@ public class Player : MonoBehaviour
             pimentometer--;
             UpdatePimentometerEffects();
         }
+        if (isInTheShower && pimentometer == 0)
+        {
+                isInTheShower = false;
+                GameObject.Find("DoucheZone").GetComponent<SpriteRenderer>().sprite = GameObject.Find("DoucheZone").GetComponent<ShowerChangingAppearance>().showerNoWater;
+            GameObject.Find("DoucheZone").GetComponent<Animator>().enabled = false;
+        }
 
         moveVelocity = moveInput.normalized * speed;
 
@@ -129,9 +135,11 @@ public class Player : MonoBehaviour
         {
             if(collider.gameObject) nearestLocation = collider.gameObject;
         }
-        if (collider.gameObject.tag == "Douche")
+        if (collider.gameObject.tag == "Douche" && pimentometer > 0)
         {
             isInTheShower = true;
+            collider.GetComponent<SpriteRenderer>().sprite = collider.GetComponent<ShowerChangingAppearance>().showerWater;
+            collider.GetComponent<Animator>().enabled = true;
         }
     }
 
@@ -141,6 +149,8 @@ public class Player : MonoBehaviour
         if (collision.gameObject.tag == "Douche")
         {
             isInTheShower = false;
+            collision.GetComponent<SpriteRenderer>().sprite = collision.GetComponent<ShowerChangingAppearance>().showerNoWater;
+            collision.GetComponent<Animator>().enabled = false;
         }
         if(collision.gameObject.CompareTag("Ardoise")) ShowArdoise(false);
     }

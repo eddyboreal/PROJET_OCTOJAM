@@ -9,6 +9,7 @@ TagManager:
   - Location
   - Ardoise
   - CanvasManager
+  - Douche
   layers:
   - Default
   - TransparentFX

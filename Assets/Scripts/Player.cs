@@ -38,6 +38,9 @@ public class Player : MonoBehaviour
     public bool isImmobilized = false;
     public bool hasInvertedControls = false;
     private float immobilizedMaxTime = 6f;
+    private float showerTimer;
+    public bool isInTheShower = false;
+    private float showerEffectTime = 1f;
 
     // Start is called before the first frame update
     void Start()
@@ -68,6 +71,18 @@ public class Player : MonoBehaviour
             UpdatePimentometerEffects();
             this.gameObject.transform.GetChild(2).GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);
         }
+
+        if (isInTheShower && pimentometer > 0)
+        {
+            showerTimer += Time.deltaTime;
+        }
+        if (showerTimer >= showerEffectTime)
+        {
+            showerTimer = 0;
+            pimentometer--;
+            UpdatePimentometerEffects();
+        }
+
         moveVelocity = moveInput.normalized * speed;
 
         if(moveVelocity.magnitude != 0 && !isDrinking)
@@ -111,11 +126,19 @@ public class Player : MonoBehaviour
         {
             if(collider.gameObject) nearestLocation = collider.gameObject;
         }
+        if (collider.gameObject.tag == "Douche")
+        {
+            isInTheShower = true;
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
         nearestLocation = null;
+        if (collision.gameObject.tag == "Douche")
+        {
+            isInTheShower = false;
+        }
     }
 
     public GameObject getNearestLocation()
@@ -154,6 +177,9 @@ public class Player : MonoBehaviour
         } else if (pimentometer >= 4)
         {
             hasInvertedControls = true;
+        } else if (pimentometer < 4)
+        {
+            hasInvertedControls = false; 
         }
     }
 

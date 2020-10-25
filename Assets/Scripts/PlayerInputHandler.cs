@@ -37,13 +37,24 @@ public class PlayerInputHandler : MonoBehaviour
         {
             OnUse();
         }
+        if (player.isImmobilized)
+        {
+            playerInput.DeactivateInput();
+        } 
+        else if (!player.isDrinking)
+        {
+            reactivateInputs();
+        }
 
     }
 
 
     public void OnMove(CallbackContext context)
     {
-        if(player != null)
+         if (player.hasInvertedControls)
+        {
+            player.moveInput = -context.ReadValue<Vector2>();
+        } else if (player != null)
         {
             player.moveInput = context.ReadValue<Vector2>();
         }

@@ -28,13 +28,16 @@ public class Player : MonoBehaviour
 
     public Vector3 moveInput;
 
-    private bool isDrinking = false;
+    public bool isDrinking = false;
     [SerializeField]
     private float drinkTimer = 1f;
     private float drinkTime = 0f;
 
-    private int pimentometer = 0;
-
+    [SerializeField] private int pimentometer = 0;
+    private float immobilizedTimer;
+    public bool isImmobilized = false;
+    public bool hasInvertedControls = false;
+    private float immobilizedMaxTime = 6f;
 
     // Start is called before the first frame update
     void Start()
@@ -52,7 +55,19 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (isImmobilized)
+        {
+            immobilizedTimer += Time.deltaTime;
+        }
+        if (immobilizedTimer >= immobilizedMaxTime)
+        {
+            immobilizedTimer = 0;
+            isImmobilized = false;
+            pimentometer = 3;
+            hasInvertedControls = false;
+            UpdatePimentometerEffects();
+            this.gameObject.transform.GetChild(2).GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);
+        }
         moveVelocity = moveInput.normalized * speed;
 
         if(moveVelocity.magnitude != 0 && !isDrinking)
@@ -77,7 +92,8 @@ public class Player : MonoBehaviour
                 isDrinking = false;
                 drinkTime = 0;
                 Canvas.SetActive(false);
-                pimentometer += Random.Range(1, 2);
+                pimentometer += Random.Range(1, 3);
+                UpdatePimentometerEffects();
             }
         }
 
@@ -126,4 +142,20 @@ public class Player : MonoBehaviour
     {
         //ArdoiseCanvas.transform.
     }
+
+    private void UpdatePimentometerEffects()
+    {
+        this.gameObject.transform.GetChild(0).GetComponent<SpriteRenderer>().color = new Color(1, 1-(pimentometer * 0.16f), 1-(pimentometer * 0.16f), 1);
+        speed = 10 - (pimentometer * 1); 
+        if (pimentometer >= 6)
+        {
+            isImmobilized = true;
+            this.gameObject.transform.GetChild(2).GetComponent<SpriteRenderer>().color = new Color(1, 0, 0, 1);
+        } else if (pimentometer >= 4)
+        {
+            hasInvertedControls = true;
+        }
+    }
+
+  
 }

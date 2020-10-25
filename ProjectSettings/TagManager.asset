@@ -8,6 +8,7 @@ TagManager:
   - Table
   - Location
   - Ardoise
+  - CanvasManager
   layers:
   - Default
   - TransparentFX

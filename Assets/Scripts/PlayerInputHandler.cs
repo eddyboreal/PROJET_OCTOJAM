@@ -14,6 +14,7 @@ public class PlayerInputHandler : MonoBehaviour
     private InputAction buttonAction1;
 
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,9 +23,11 @@ public class PlayerInputHandler : MonoBehaviour
         player.SetPIHandler(this);
         playerInput.actionEvents.ElementAt(0).AddListener(playerInput.GetComponent<PlayerInputHandler>().OnMove);
 
+
         buttonAction1 = new InputAction();
         buttonAction1 = playerInput.actions.ElementAt(1);
         buttonAction1.Enable();
+
     }
 
     // Update is called once per frame
@@ -34,6 +37,7 @@ public class PlayerInputHandler : MonoBehaviour
         {
             OnUse();
         }
+
     }
 
 
@@ -66,6 +70,7 @@ public class PlayerInputHandler : MonoBehaviour
             }
         }
     }
+
 
     public void reactivateInputs()
     {

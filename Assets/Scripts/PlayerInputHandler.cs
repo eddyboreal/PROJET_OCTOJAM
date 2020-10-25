@@ -20,6 +20,7 @@ public class PlayerInputHandler : MonoBehaviour
     //Sounds
     public AudioClip PlayerJoin;
     public AudioClip PlayerReady;
+    public AudioClip PlayerDrink;
     
 
 

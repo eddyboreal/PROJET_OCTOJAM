@@ -92,6 +92,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: d0894497-27f8-4e52-8651-e6914de68176
     m_ActionName: MainMenuACtionMap/New action[/Keyboard/enter]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: c044fd8a-a841-42e1-84f5-5099558c08a9
+    m_ActionName: PlayerMovement/GetReady[/Keyboard/enter]
   m_NeverAutoSwitchControlSchemes: 1
   m_DefaultControlScheme: 
   m_DefaultActionMap: PlayerMovement
@@ -114,3 +118,5 @@ MonoBehaviour:
   CanvasPrefab: {fileID: 135400684192957844, guid: ee91de34f9d0b62469c74c4a9a8806fb,
     type: 3}
   CanvasManagerMainScene: {fileID: 0}
+  PlayerJoin: {fileID: 8300000, guid: 1dc53396273fcc14893c69a669642270, type: 3}
+  PlayerReady: {fileID: 8300000, guid: 3954d3f80997a4745aef26766d6e2e3e, type: 3}

@@ -10,16 +10,22 @@ public class PlayerInputUI : MonoBehaviour
 
     private InputAction buttonAction2;
     PlayerInput playerInput;
+    public PlayerControls controls;
     public GameObject CanvasManager;
 
     // Start is called before the first frame update
     void Start()
     {
         playerInput = GetComponent<PlayerInput>();
-
+        
         buttonAction2 = new InputAction();
-        buttonAction2 = playerInput.actions.ElementAt(2);
+        buttonAction2 = playerInput.actions.ElementAt(3);
         buttonAction2.Enable();
+/*
+        for(int i =0; i< playerInput.actions.Count(); i++)
+        {
+            Debug.Log(playerInput.actions.ElementAt(i).name);
+        }*/
     }
 
     // Update is called once per frame

@@ -22,18 +22,17 @@ public class CanvasManager : MonoBehaviour
 
     public void OnMainMenuClick()
     {
-        if(progression == 0)
+        Debug.Log("aaa");
+        if (progression == 1)
+        {
+            MainMenuImage.GetComponent<Animator>().SetBool("clicked1", true);
+        }
+        else if(progression == 0)
         {
             
             MainMenuImage.GetComponent<Animator>().SetBool("clicked", true);
             progression++;
         }
-        else if(progression == 1)
-        {
-            MainMenuImage.GetComponent<Animator>().SetBool("clicked1", true);
-        }
-        
-        //MainMenuImage.GetComponent<Animator>().SetBool("clicked", false);
     }
 
     public void NextScene()

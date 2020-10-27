@@ -65,6 +65,17 @@
                     "isPartOfComposite": true
                 },
                 {
+                    "name": "up",
+                    "id": "56d82c4c-3a8c-43a4-a29b-18d48f6e45bd",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
                     "name": "down",
                     "id": "c9a7650f-b868-45ad-8161-33100d9ba0dd",
                     "path": "<Keyboard>/s",
@@ -82,6 +93,17 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "4bb6c762-dfe9-4657-aac5-4b84216d7bac",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
                     "action": "Movement",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -153,6 +175,17 @@
                     "isPartOfComposite": true
                 },
                 {
+                    "name": "ZQSD",
+                    "id": "0065366f-64de-4cc1-9bf8-5450c533c44c",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movement",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
                     "name": "",
                     "id": "1295e1a0-a4b7-4446-ace8-100d551afd4b",
                     "path": "<Gamepad>/buttonSouth",
@@ -219,17 +252,39 @@
                     "id": "d0894497-27f8-4e52-8651-e6914de68176",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "Press"
                 }
             ],
             "bindings": [
                 {
                     "name": "",
-                    "id": "a912615d-2965-4338-b78e-fe98cb544749",
-                    "path": "*/{Submit}",
-                    "interactions": "",
+                    "id": "33f0567a-6f9a-42cc-b8a7-ccef06facd3f",
+                    "path": "<Keyboard>/anyKey",
+                    "interactions": "Press",
                     "processors": "",
                     "groups": "Keyboard",
+                    "action": "Enter",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e5e7c5bb-797e-440e-9615-d38bc34d8085",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "Mouse;Keyboard",
+                    "action": "Enter",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a94f47c5-29ac-4537-b936-59842633b32c",
+                    "path": "*/{PrimaryAction}",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "",
                     "action": "Enter",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -256,6 +311,17 @@
                 {
                     "devicePath": "<Keyboard>",
                     "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        },
+        {
+            "name": "Mouse",
+            "bindingGroup": "Mouse",
+            "devices": [
+                {
+                    "devicePath": "<Mouse>",
+                    "isOptional": true,
                     "isOR": false
                 }
             ]
